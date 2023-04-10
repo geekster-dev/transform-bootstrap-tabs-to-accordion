@@ -1,8 +1,10 @@
 function transformTabsToAccordion(screen){
     if ($(window).width() < screen){
+        
         var string = "";
-        var	tabs = $(".nav-tabs .nav-item").toArray();
-        var	tabs_content = $(".tab-content .tab-pane").toArray();
+        var tabs = $(".nav-tabs .nav-item").toArray();
+        var tabs_content = $(".tab-content .tab-pane").toArray();
+        
         string += '<div id="bootstrap-accordion" class="accordion">';
         $.each(tabs, function(n, val){
             string += '<div class="accordion-item">';
@@ -17,6 +19,7 @@ function transformTabsToAccordion(screen){
             string += '</div>';
         });
         string += '</div>';
+        
         $(string).insertAfter(".nav-tabs");
         $("#bootstrap-accordion").find(".accordion-collapse").first().addClass("show");
         $("#bootstrap-accordion").find(".accordion-item .accordion-button").first().attr("aria-expanded","true").removeClass("collapsed");
