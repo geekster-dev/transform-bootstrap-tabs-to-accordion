@@ -2,6 +2,12 @@
 
 The script automatically transform the Bootstrap [Tabs](https://getbootstrap.com/docs/5.2/components/navs-tabs/) to the [Accordion](https://getbootstrap.com/docs/5.2/components/accordion/) when the screen size is smaller than a specific breakpoint (default < 768px).
 
+```js
+$(document).ready(function(){
+    transformTabsToAccordion(768);
+});
+```
+
 [**D E M O**](https://geekster.pl/demo/transform-bootstrap-tabs-to-accordion/)
 
 ## Tech Stack
